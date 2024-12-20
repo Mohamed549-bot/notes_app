@@ -12,7 +12,8 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins')
+          .copyWith(
         scaffoldBackgroundColor: Colors.grey[850],
         primaryColor: Colors.grey[700],
         appBarTheme: AppBarTheme(
