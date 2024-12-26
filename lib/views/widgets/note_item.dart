@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_new_project/views/edit_note_view.dart';
 import 'package:my_new_project/views/widgets/edit_note_view_body.dart';
 
 class NoteItem extends StatelessWidget {
@@ -13,7 +14,7 @@ class NoteItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const EditNoteViewBody();
+              return const EditNoteView();
             },
           ),
         );
