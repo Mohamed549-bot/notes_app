@@ -9,7 +9,7 @@ import 'package:my_new_project/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
-    Hive.registerAdapter(NoteModelAdapter());
+  Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
   Bloc.observer = SimpleBlocObserver();
   runApp(const NotesApp());
@@ -21,19 +21,18 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          brightness: Brightness.dark,
-          fontFamily: 'Poppins',
-        ).copyWith(
-          scaffoldBackgroundColor: Colors.grey[850],
-          primaryColor: Colors.grey[700],
-          appBarTheme: AppBarTheme(
-            color: Colors.grey[800],
-          ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poppins',
+      ).copyWith(
+        scaffoldBackgroundColor: Colors.grey[850],
+        primaryColor: Colors.grey[700],
+        appBarTheme: AppBarTheme(
+          color: Colors.grey[800],
         ),
-        home: const NotesView(),
       ),
-    );
+      home: const NotesView(),
+    );  
   }
 }
