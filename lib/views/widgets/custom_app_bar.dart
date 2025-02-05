@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:my_new_project/views/widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.titile, required this.icon});
+  const CustomAppBar(
+      {super.key, required this.titile, required this.icon, this.onpressed});
   final String titile;
   final IconData icon;
+  final void Function()? onpressed;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,7 +20,8 @@ class CustomAppBar extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        CustomSearchIcon(
+        CustomIcon(
+          onpressed: onpressed,
           icon: icon,
         ),
       ],
